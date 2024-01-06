@@ -36,7 +36,7 @@ function App(): React.JSX.Element {
           }}
         />
         <Stack.Screen name="Home" component={Home} options={{
-          title: 'Eventos',
+          title: 'FireTickets',
           headerStyle: {
             backgroundColor: '#F5F5F5',
           },
