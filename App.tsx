@@ -15,6 +15,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from './screens/Splash';
 import Home from './screens/Home';
+import CrearEvento from './screens/CrearEvento';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,13 @@ function App(): React.JSX.Element {
         />
         <Stack.Screen name="Home" component={Home} options={{
           title: 'FireTickets',
+          headerStyle: {
+            backgroundColor: '#F5F5F5',
+          },
+          headerTintColor: 'black',
+        }} />
+        <Stack.Screen name="CrearEvento" component={CrearEvento} options={{
+          title: 'Nuevo Evento',
           headerStyle: {
             backgroundColor: '#F5F5F5',
           },
