@@ -2,16 +2,16 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert, SafeAreaView, TextInpu
 import React, { useState } from 'react'
 
 
-export default function CrearEvento({navigation, route }: any) {
-  
+export default function CrearEvento({ navigation, route }: any) {
 
-    
+
+
     const [nombre, setNombre] = useState('');
     const [precio, setPrecio] = useState('');
     const [categoria, setcategoria] = useState("");
     const [stock, setStock] = useState("");
     const [agree, setAgree] = useState(true);
-    var id='6';
+    var id = '6';
 
 
     return (
@@ -74,11 +74,11 @@ export default function CrearEvento({navigation, route }: any) {
                     onPress={() => {
                         const nuevoEvento = { id, name: nombre, price: precio, category: categoria, stock: stock };
                         navigation.navigate({
-                          name: 'MostrarEventos',
-                          params: { eventos: [...(route.params?.eventos || []), nuevoEvento] },
+                            name: 'MostrarEventos',
+                            params: { eventos: [...(route.params?.eventos || []), nuevoEvento] },
                         });
-                      }}
-                    >
+                    }}
+                >
                     <Text style={styles.buttonText}> Guardar </Text>
                 </TouchableOpacity>
 

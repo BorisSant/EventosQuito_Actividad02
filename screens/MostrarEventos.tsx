@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native
 import React, { useEffect, useState } from 'react'
 
 
-const initialEventos  = [
+const initialEventos = [
     { id: '1', name: 'Martin Garrix', price: '90', category: 'Electrónica', stock: 500 },
     { id: '2', name: 'Artistas varios', price: '50', category: 'Reggaeton', stock: 200 },
     { id: '3', name: 'Feid', price: '50', category: 'Reggaeton', stock: 300 },
@@ -10,7 +10,7 @@ const initialEventos  = [
     { id: '5', name: 'Blackpink', price: '50', category: 'K-Pop', stock: 200 },
 ];
 
-export default function MostrarEventos({ navigation,route }: any) {
+export default function MostrarEventos({ navigation, route }: any) {
 
     const [eventos, setEventos] = useState([...initialEventos]);
 
@@ -26,9 +26,9 @@ export default function MostrarEventos({ navigation,route }: any) {
 
     useEffect(() => {
         if (route.params?.eventos) {
-          setEventos([...eventos, ...route.params.eventos]);
+            setEventos([...eventos, ...route.params.eventos]);
         }
-      }, [route.params?.eventos]);
+    }, [route.params?.eventos]);
 
     return (
 
